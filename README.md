@@ -122,8 +122,8 @@ features = ['Open', 'High', 'Low', 'Close', 'Volume']
 plt.subplots(figsize=(20,10))
 
 for i, col in enumerate(features):
-plt.subplot(2,3,i+1)
-sb.distplot(df[col])
+	plt.subplot(2,3,i+1)
+	sb.distplot(df[col])
 plt.show()
 ```
 
@@ -136,8 +136,8 @@ In the distribution plot of OHLC data, we can see two peaks which means the data
 ```
 plt.subplots(figsize=(20,10))
 for i, col in enumerate(features):
-plt.subplot(2,3,i+1)
-sb.boxplot(df[col])
+	plt.subplot(2,3,i+1)
+	sb.boxplot(df[col])
 plt.show()
 ```
 * Output:
@@ -181,8 +181,8 @@ data_grouped = df.groupby('year').mean()
 plt.subplots(figsize=(20,10))
 
 for i, col in enumerate(['Open', 'High', 'Low', 'Close']):
-plt.subplot(2,2,i+1)
-data_grouped[col].plot.bar()
+	plt.subplot(2,2,i+1)
+	data_grouped[col].plot.bar()
 plt.show()
 ```
 * Output:
